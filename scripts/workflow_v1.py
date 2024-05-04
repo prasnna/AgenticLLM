@@ -9,7 +9,7 @@ from langchain_core.outputs.generation import Generation
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 # Set up OpenAI client
-openai = OpenAI()
+openai = OpenAI(temperature=0)
 
 
 def generate_python_code(prompt: str) -> str:
@@ -24,7 +24,7 @@ def generate_python_code(prompt: str) -> str:
     """
     # Generate Python code for the prompt
     response = openai.generate(
-        [f"'generate python code alone for the following text', '{prompt}'"]
+        [f"'generate python code alone for the following text', '{prompt}'"],
     )
     op: Generation = response.generations[0][0]
     # Extract the generated code from the response
@@ -44,7 +44,7 @@ def generate_python_test_code(code: str) -> str:
     """
     # Generate Python code for the prompt
     response = openai.generate(
-        [f"'generate python unit test code alone for the following code', '{code}'"]
+        [f"'only generate python unit test code with main method to run it for the following code', '{code}'"]
     )
     op: Generation = response.generations[0][0]
     # Extract the generated code from the response

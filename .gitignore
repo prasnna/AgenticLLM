@@ -170,3 +170,5 @@ cache/
 !src/data/*.csv
 .gitignore_old
 scripts/config.py
+*.pem
+scripts/conversewithNONSQL.py
