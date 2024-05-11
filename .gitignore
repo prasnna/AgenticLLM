@@ -172,3 +172,7 @@ cache/
 scripts/config.py
 *.pem
 scripts/conversewithNONSQL.py
+sql-scripts/*.sql
+*.ipynb
+scripts/sql_formatting/
+scripts/conversewithSQL_bed_rock_private.py

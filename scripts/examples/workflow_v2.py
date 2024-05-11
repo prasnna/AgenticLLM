@@ -6,16 +6,25 @@ import dotenv
 from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
+from langchain_community.llms import OpenAI,Bedrock
 
-from config import *
 from langchain_core.outputs.generation import Generation
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Set OpenAI API key as an environment variable
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+#os.environ["OPENAI_API_KEY"] = os.environ.get('OPENAI_API_KEY_v0')
 
-# Initialize the LLM
-llm = OpenAI()
+llm = Bedrock(
+    credentials_profile_name="saml", model_id="anthropic.claude-v2",
+    model_kwargs={"temperature": 0}
+)
+
+
+
 
 code_prompt = PromptTemplate(
     input_variables=["task", "language"],

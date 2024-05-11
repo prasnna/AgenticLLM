@@ -4,9 +4,10 @@ import os
 from langchain import OpenAI
 
 import os
+from config import OPENAI_API_KEY
 
 # Set OpenAI API key as an environment variable
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 #import subprocess
 import os
