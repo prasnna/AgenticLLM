@@ -27,7 +27,7 @@ def run_safety():
 
 if __name__ == "__main__":
     # Specify the path to the directory or file to be analyzed
-    code_path = "C:/Users/pparthasarathy/Desktop/AgenticLLM/AgenticLLM/scripts"
+    code_path = "../AgenticLLM/scripts"
 
     # Perform static code analysis with Bandit
     run_bandit(code_path)

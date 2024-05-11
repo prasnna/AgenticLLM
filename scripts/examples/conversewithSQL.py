@@ -8,7 +8,7 @@ from config import *
 from langchain.agents import create_sql_agent
 from langchain_community.chat_models import ChatOpenAI
 from langchain.agents.agent_types import AgentType
-from query_tool_v1 import query_help_tool_v1
+from scripts.SQLKnowledgeBaseTool import query_help_tool_v1
 from langchain.agents.agent_toolkits.sql.prompt import (
     SQL_FUNCTIONS_SUFFIX,
     SQL_PREFIX,
@@ -81,7 +81,3 @@ agent_executor = create_sql_agent(
 
 
 agent_executor.invoke(input = "prompt")
-
-#find how many agents are there with an email address of donotsend@prac.com , output should be just a query grouped by agent (first name + last name),count
-
-#handle_parsing_errors=True

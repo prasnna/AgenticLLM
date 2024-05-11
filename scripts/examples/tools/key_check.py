@@ -29,7 +29,7 @@ def find_api_keys(directory):
 
 if __name__ == "__main__":
     # Specify the directory to search for API keys
-    search_directory = "C:/Users/pparthasarathy/Desktop/AgenticLLM/AgenticLLM/scripts"
+    search_directory = "scripts"
 
     # Find potential API keys
     found_keys = find_api_keys(search_directory)

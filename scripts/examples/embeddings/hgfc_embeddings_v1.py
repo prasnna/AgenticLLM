@@ -19,9 +19,6 @@ os.environ['LANGCHAIN_API_KEY'] = langchain_key
 
 # use local cache, ~ 500 MB download size
 
-
-#C:\Users\pparthasarathy\.cache\huggingface\hub\models--sentence-transformers--all-mpnet-base-v2\snapshots\84f2bcc00d77236f9e89c8a360a00fb1139bf47d
-
 # Directory path containing SQL files
 sql_dir_path = "C:/sql-scripts/"
 
