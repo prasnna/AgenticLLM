@@ -162,7 +162,6 @@ src/test.py
 src/config.py
 *.sqlite
 *.jpg
-*.png
 *.log
 *.json
 cache/
