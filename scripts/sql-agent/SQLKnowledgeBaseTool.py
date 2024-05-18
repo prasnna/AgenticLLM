@@ -18,7 +18,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 SQL_DIR_PATH = "sql-scripts"
 
 # List of SQL files to include (Optional)
-SQL_FILE_LIST = []
+SQL_FILE_LIST = ['meta_data.sql']
 
 # Load SQL file contents
 sql_contents = []
@@ -26,12 +26,13 @@ for filename in os.listdir(SQL_DIR_PATH):
     if filename.endswith(".sql") and (not SQL_FILE_LIST or filename in SQL_FILE_LIST):
         with open(os.path.join(SQL_DIR_PATH, filename), "r") as file:
             sql_content = file.read()
+            print(sql_content)
             sql_contents.append(sql_content)
 
 # Embed SQL contents and create a vector store
 vectorstore = Chroma.from_texts(
     texts=sql_contents,
-    embedding=HuggingFaceEmbeddings(model_name="bert-base-uncased")
+    embedding=HuggingFaceEmbeddings()
 )
 retriever = vectorstore.as_retriever(search_kwargs={"k": 1})
 

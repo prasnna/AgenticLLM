@@ -170,8 +170,10 @@ cache/
 .gitignore_old
 scripts/config.py
 *.pem
-scripts/conversewithNONSQL.py
+scripts/sql-agent/conversewithNONSQL.py
 sql-scripts/*.sql
 *.ipynb
-scripts/sql_formatting/
-scripts/conversewithSQL_bed_rock_private.py
+scripts/sql-agent/sql_formatting/
+scripts/sql-agent/conversewithSQL_bed_rock_private.py
+myenv
+embedded-data

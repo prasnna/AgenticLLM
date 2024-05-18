@@ -8,7 +8,7 @@ from config import *
 from langchain.agents import create_sql_agent
 from langchain_community.chat_models import ChatOpenAI
 from langchain.agents.agent_types import AgentType
-from scripts.SQLKnowledgeBaseTool import query_help_tool_v1
+from SQLKnowledgeBaseTool import query_help_tool
 from langchain.agents.agent_toolkits.sql.prompt import (
     SQL_FUNCTIONS_SUFFIX,
     SQL_PREFIX,
@@ -74,7 +74,7 @@ agent_executor = create_sql_agent(
     toolkit=toolkit,
     verbose=True,
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    extra_tools= [query_help_tool_v1],
+    extra_tools= [query_help_tool],
     prompt= PromptTemplate.from_template(template),
     top_k=2
 )
