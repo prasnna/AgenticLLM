@@ -151,29 +151,49 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-#customs
+# Custom ignores
 tmp/
 __pycache__/
+*.pyc
+
+# Data files
 *.csv
 *.xlsx
 *.html
 *.docx
-src/test.py
-src/config.py
 *.sqlite
 *.jpg
-*.log
 *.json
-cache/
 *.db
-!src/data/*.csv
-.gitignore_old
-scripts/config.py
 *.pem
-scripts/sql-agent/conversewithNONSQL.py
-sql-scripts/*.sql
-*.ipynb
-scripts/sql-agent/sql_formatting/
-scripts/sql-agent/conversewithSQL_bed_rock_private.py
-myenv
-embedded-data
+*.zip
+*.dll
+*.def
+
+# Exceptions
+!data/sql_scripts/*.sql
+!requirements.txt
+
+# Environment
+.env
+myenv/
+langgraph_env/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and cache
+*.log
+cache/
+
+# Temporary and test files
+test_*
+prac*
+
+# Old files
+.gitignore_old
+data/
+embedded-data/
+scripts/postgres/
