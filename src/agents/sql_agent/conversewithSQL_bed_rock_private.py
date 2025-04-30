@@ -46,7 +46,7 @@ db = SQLDatabase.from_uri(db_url)
 model = ChatBedrock(
     credentials_profile_name=get_env_var("BED_ROCK_AWS_PROFILE", "saml"),
     provider="anthropic",
-    model_id="arn:aws:bedrock:us-east-1:848197379416:inference-profile/us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    model_id=get_env_var("MODEL_ID"),
     model_kwargs={"temperature": 0}
 )
 
