@@ -64,37 +64,3 @@ agent_executor = create_sql_agent(
 )
 
 #agent_executor.invoke(input = "find all the ")
-
-#agent_executor.invoke(input = "find how many agents are there with an email address of donotsend@prac.com")
-
-# more context, this RAG can be done enhancing meta data where it holds relations like one to one, one to many etc...by Reveiw Agent/Feed back Agent
-
-#agent_executor.invoke(input = "find count of agent level code with at least one contact having email donotsend@prac.com")
-
-# no context try
-
-#agent_executor.invoke(input = "find  agent details with contracts in the state of MA and lob  Personal Auto")
-
-
-
-#agent_executor.invoke(input = "query to find all distinct  states from address for agent with level code 'CW02', output can be 'level code', list of comma separated states eg) ABC,[NJ,NY,..etc]",handle_parsing_errors=True)
-
-#agent_executor.invoke(input = "query to find the  top 2 'agents' in the 'NJ' 'state', output should include distinct level code,address,email")
-
-#agent_executor.invoke(input = "query to find the  top 2 'agents' in the 'NJ' 'state', output should include distinct level code,address,email")
-
-#agent_executor.invoke(input = "query to find the number of 'agents' in the 'NY' 'state'")
-
-#agent_executor.invoke(input = "only create a query to soft delete agent with the following level code: 'A0D9459'")
-
-#agent_executor.invoke(input = "only create a query to delete the following level code: 'A0D9459'  by updating deleted flag to 'D' and level code to 'D-A0D9459'")
-
-#agent_executor.invoke(input = "query to find 'Channel Code' of  agent with level code CW02")
-
-#agent_executor.invoke(input = "query to find count of distinct level code of agents where there is at least one contact with email donotsend@prac.com")
-
-#agent_executor.invoke(input = "find how many agents are there with an email address of donotsend@prac.com , output should be just a query grouped by agent (first name + last name),count")
-
-#agent_executor.invoke(input = "query to find number of agents where there is at least one contact with email donotsend@prac.com")
-
-#handle_parsing_errors=True

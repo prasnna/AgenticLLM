@@ -67,6 +67,13 @@ agenticllm/
    ```
 
 5. Set up environment variables in a `.env` file:
+   - Copy the `.env.sample` file to `.env` and fill in your values
+   - Alternatively, use the agent-specific sample files in each agent's directory:
+     - `src/agents/sql_agent/.env.sample`
+     - `src/agents/memory_agent/.env.sample`
+     - `src/agents/google_adk_agent/.env.sample`
+
+   Example of key environment variables:
    ```
    # SQL Agent
    DB_URL=your_database_url
